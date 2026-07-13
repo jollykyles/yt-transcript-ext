@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="wordmark">
+      <span class="tick"></span>
+      <h1>Transcript Grabber</h1>
+    </div>
+    <span id="sourceBadge" class="badge hidden"></span>
+  </header>
+
+  <div class="url-row">
+    <input type="text" id="urlInput" placeholder="Paste a YouTube URL…" spellcheck="false" autocomplete="off">
+    <button id="fetchBtn" title="Fetch transcript">Fetch</button>
+  </div>
+
+  <div id="status" class="status hidden"></div>
+
+  <div id="resultArea" class="result hidden">
+    <div class="result-toolbar">
+      <label class="ts-toggle">
+        <input type="checkbox" id="tsToggle">
+        <span>Timestamps</span>
+      </label>
+      <div class="toolbar-actions">
+        <button id="copyBtn" class="ghost">Copy</button>
+        <button id="downloadBtn" class="ghost">Save .txt</button>
+      </div>
+    </div>
+    <pre id="transcript"></pre>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
